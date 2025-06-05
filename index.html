@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>🎯 Mua Vé Xổ Số Blockchain</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+  <script src="abi.js"></script>
+  <script defer src="app.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    input, button { padding: 8px; margin: 6px 0; width: 100%; max-width: 300px; }
+    h1 { color: #cc0000; }
+    #veStatus, #daMuaList { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🎯 Mua Vé Xổ Số Blockchain</h1>
+
+  <input type="text" id="nameInput" placeholder="Nhập tên của bạn" />
+  <input type="number" id="veInput" placeholder="Số lượng vé muốn mua" min="1" />
+  <button onclick="startBuying()">Bắt đầu mua vé</button>
+
+  <p id="veStatus"></p>
+  <input type="number" id="numberInput" placeholder="Nhập số (00–99)" min="0" max="99" />
+  <button onclick="buyTicket()">🛒 Ghi số</button>
+  <ul id="daMuaList"></ul>
+
+  <hr>
+  <h3>📋 Danh sách người chơi</h3>
+  <button onclick="listPlayers()">🔄 Tải lại danh sách</button>
+  <ul id="playerList"></ul>
+
+  <hr>
+  <h3>🌀 Quay Số</h3>
+  <div id="spinner" style="font-size: 40px;">--</div>
+  <button onclick="drawAndSpin()">🎯 Quay số may mắn</button>
+  <p id="resultText"></p>
+
+  <hr>
+  <h3>📜 Lịch sử quay số</h3>
+  <button onclick="xemLichSu()">📖 Xem lịch sử</button>
+  <ul id="historyList"></ul>
+</body>
+</html>
